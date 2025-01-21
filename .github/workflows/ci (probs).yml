@@ -1,0 +1,11 @@
+name: CI/Build
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: macOS-latest
+      steps:
+       - name: checkout
+         uses: actions/checkout@v2
+       - name: Set up Theos 
+         run: | 
+           sudo apt-get update sudo apt-get install -y theos
